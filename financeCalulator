@@ -1,0 +1,56 @@
+#program that allows user to select from 2 investment calculators
+import math
+investment = ("to calculate the amount of interest you'll earn on your investment")
+bond = ("to calculate the amount you'll have to pay on a home loan")
+print(investment)
+print(bond)
+
+choice1 = "investment"
+choice2 = "bond"
+selection = input("Enter either investment or bond from menu above to proceed :")
+
+if selection == choice1.upper(): # allows entry of INVESTMENT
+    print("Thank you for selecting investment calculator")
+if selection == choice1.capitalize(): # allows entry of Investment
+        print("Thank you for selecting investment calculator")
+if selection == choice1: # allows entry of investment
+        print("Thank you for selecting investment calculator")
+
+elif selection == choice2.upper():  # allows entry of BOND
+    print("Thank you for selecting bond calculator")
+elif selection == choice2.capitalize(): #allows entry of Bond
+    print("Thank you for selecting bond calculator")
+elif selection == choice2: # allows entry of bond
+    print("Thank you for selecting bond calculator")
+
+
+while selection == choice1.upper().capitalize():
+Iloan = input("What is the total amount of money you want to deposit : ")#asks for the total amount of money to be entered
+print("Your total deposit is £" + Iloan)
+Iyears = input("For how many years do you want to invest this for: ")#asks how many years is investment
+    print("Your total years of deposit is" + Iyears)
+Irate = input("What rate of interest do you want in % : ") #asks for interest rate specific to investment calculator
+    print("Your interest rate is" + Irate + "%")
+
+interest = ("Which interest do you want to choose, simple or compound? : ")
+ratechoice1 = "simple" #string of entry that would lead to if statement
+ratechoice2 = "compound"
+simple_rate = Iloan *[1 + (Irate * Iyears)] #formulae for simple rate
+compound_rate = Iloan *[1 + Irate]^Iyears #formulae for compound rate
+
+if interest == ratechoice1.upper.capitalize():
+    print("Thank you for selecting simple rate, we will calculate your growth")
+    print("Your interest amount after" + Iyears + "  is" +  simple_rate)
+elif interest == ratechoice2.upper().capitalize(): # FEEDBACK
+    print("Thank you for selecting compound rate, we will calculate your growth")
+    print("Your interest amount after" + Iyears + "  is" + compound_rate)
+
+while selection == choice2.upper().capitalize(): #FEEDBACK
+    print("Thank you for selecting bond calculator")
+house_value = input("How much does the house currently cost in £? : ") #current cost of house entered
+    print("The current house value is £" + house_value)
+Brate = input("What is your interest rate for this bond? : ")#asks for interest rate specific to bond calculator
+    print("The rate you entered is" + Brate + "%")
+Bmonths = input("For how many months do you plan to take to repay the bond? : ")
+repayment = (Brate * house_value) / 1 -[(1 + Brate) ** (Bmonths * -1)] #formula for bond rate
+    print("Your repayment value is £" + repayment) #displays repayment value
